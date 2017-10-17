@@ -18,11 +18,96 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     dalvik.vm.debug.alloc=0
 
-# Backup tool
+# SiX-specific init file
 PRODUCT_COPY_FILES += \
-    vendor/gzosp/prebuilt/common/bin/backuptool.sh:install/bin/backuptool.sh \
-    vendor/gzosp/prebuilt/common/bin/backuptool.functions:install/bin/backuptool.functions \
-    vendor/gzosp/prebuilt/common/bin/50-gzosp.sh:system/addon.d/50-gzosp.sh
+    vendor/gzosp/prebuilt/common/etc/init.local.rc:root/init.six.rc
+
+# Allow tethering without provisioning app
+PRODUCT_PROPERTY_OVERRIDES += \
+    net.tethering.noprovisioning=true
+
+# S.i.X property overides
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.sys.fw.bg_apps_limit=20 \
+    wifi.supplicant_scan_interval=180 \
+    windowsmgr.max_events_per_sec=150 \
+    debug.performance.tuning=1 \
+    ro.ril.power_collapse=1 \
+    persist.service.lgospd.enable=0 \
+    persist.service.pcsync.enable=0 \
+    ro.facelock.black_timeout=400 \
+    ro.facelock.det_timeout=1500 \
+    ro.facelock.rec_timeout=2500 \
+    ro.facelock.lively_timeout=2500 \
+    ro.facelock.est_max_time=600 \
+    ro.facelock.use_intro_anim=false \
+    ro.setupwizard.network_required=false \
+    ro.setupwizard.gservices_delay=-1 \
+    persist.sys.dun.override=0 \
+    ro.substratum.verified=true \
+    ro.adb.secure=1 \
+    ro.camcorder.videoModes=true \
+    ro.media.enc.jpeg.quality=100 \
+    ro.media.dec.jpeg.memcap=8000000 \
+    ro.media.enc.hprof.vid.bps=8000000
+    ro.media.capture.maxres=8m \
+    ro.media.panorama.defres=3264×1840 \
+    ro.media.panorama.frameres=1280×720 \
+    ro.media.enc.hprof.vid.fps=65 \
+    pm.sleep_mode=1 \
+    video.accelerate.hw=1 \
+    debug.composition.type=gpu \
+    profiler.force_disable_err_rpt=1 \
+    profiler.force_disable_ulog=1 \
+    net.tcp.buffersize.default=4096,87380,256960, 4096, 16384,256960 \
+    net.tcp.buffersize.wifi=4096,87380,256960,409 6,163 84,256960 \
+    net.tcp.buffersize.umts=4096,8 7380,256960,4096,163 84,256960 \
+    net.tcp.buffersize.gprs=4096,8 7380,256960,4096,163 84,256960 \
+    net.tcp.buffersize.edge=4096,8 7380,256960,4096,163 84,256960 \
+    persist.telephony.support.ipv6=1 \
+    persist.telephony.support.ipv4=1 \
+    ro.telephony.call_ring.delay=0 \
+    ring.delay=0 \
+    ro.kernel.android.checkjni=0 \
+    ro.kernel.checkjni=0 \
+    ro.config.nocheckin=1 \
+    drm.service.enabled=true
+
+# Set Pixel blue light theme on Gboard
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.com.google.ime.theme_id=5
+
+# Viper4Rise 
+PRODUCT_COPY_FILES += \
+    vendor/gzosp/prebuilt/common/lib/libauaudioutils.so:system/lib/libauaudioutils.so \
+    vendor/gzosp/prebuilt/common/lib/libaudsd2pcm.so:system/lib/libaudsd2pcm.so \
+    vendor/gzosp/prebuilt/common/lib/libldacBT_enc.so:system/lib/libldacBT_enc.so \
+    vendor/gzosp/prebuilt/common/lib/libsrsprocessing.so:system/lib/libsrsprocessing.so \
+    vendor/gzosp/prebuilt/common/lib/libgnmc_decoder.1.1.8.so:system/lib/libgnmc_decoder.1.1.8.so \
+    vendor/gzosp/prebuilt/common/lib/libausndfile.so:system/lib/libausndfile.so \
+    vendor/gzosp/prebuilt/common/lib/libausoxr.so:system/lib/libausoxr.so \
+    vendor/gzosp/prebuilt/common/lib/libauusb.so:system/lib/libauusb.so \
+    vendor/gzosp/prebuilt/common/lib/libauogg.so:system/lib/libauogg.so \
+    vendor/gzosp/prebuilt/common/lib/libgnsdk_dsp.3.09.0.so:system/lib/libgnsdk_dsp.3.09.0.so \
+    vendor/gzosp/prebuilt/common/lib/libautaglib.so:system/lib/libautaglib.so \
+    vendor/gzosp/prebuilt/common/lib/libmaxxeffectwrapper.so:system/lib/libmaxxeffectwrapper.so \
+    vendor/gzosp/prebuilt/common/lib/libV4AJniUtils.so:system/lib/libV4AJniUtils.so \
+    vendor/gzosp/prebuilt/common/lib/libMAM2-processcode-Coretex_A9.so:system/lib/libMAM2-processcode-Coretex_A9.so \
+    vendor/gzosp/prebuilt/common/lib/libMAM2-wavesfx-Coretex_A9.so:system/lib/libMAM2-wavesfx-Coretex_A9.so \
+    vendor/gzosp/prebuilt/common/lib/libosl-maxxaudio-itf.so:system/lib/libosl-maxxaudio-itf.so \
+    vendor/gzosp/prebuilt/common/lib/libauvorbis.so:system/lib/libauvorbis.so \
+    vendor/gzosp/prebuilt/common/lib/libgnustl_shared.so:system/lib/libgnustl_shared.so \
+    vendor/gzosp/prebuilt/common/lib/libradsone-shared.so:system/lib/libradsone-shared.so \
+    vendor/gzosp/prebuilt/common/lib/libambisonic_audio_renderer.so:system/lib/libambisonic_audio_renderer.so \
+    vendor/gzosp/prebuilt/common/lib/libswresample-2.so:system/lib/libswresample-2.so \
+    vendor/gzosp/prebuilt/common/lib/libaemagic.so:system/lib/libaemagic.so \
+    vendor/gzosp/prebuilt/common/lib/soundfx/libeffectproxy.so:system/lib/soundfx/libeffectproxy.so \
+    vendor/gzosp/prebuilt/common/lib/soundfx/libmaxxeffect-cembedded.so:system/lib/soundfx/libmaxxeffect-cembedded.so \
+    vendor/gzosp/prebuilt/common/lib/soundfx/libqcompostprocbundle.so:system/lib/soundfx/libqcompostprocbundle.so \
+    vendor/gzosp/prebuilt/common/lib/soundfx/libsonypostprocbundle.so:system/lib/soundfx/libsonypostprocbundle.so \
+    vendor/gzosp/prebuilt/common/lib/soundfx/libsonysweffect.so:system/lib/soundfx/libsonysweffect.so \
+    vendor/gzosp/prebuilt/common/lib/soundfx/libv4a_fx_ics.so:system/lib/soundfx/libv4a_fx_ics.so \
+    vendor/gzosp/prebuilt/common/lib/soundfx/libvisualizer.so:system/lib/soundfx/libvisualizer.so
 
 # Backup services whitelist
 PRODUCT_COPY_FILES += \
@@ -66,16 +151,12 @@ PRODUCT_COPY_FILES += \
 # Required packages
 PRODUCT_PACKAGES += \
     CellBroadcastReceiver \
-    Development \
-    SpareParts \
-    LockClock \
     su
 
 # Optional packages
 PRODUCT_PACKAGES += \
-    Basic \
-    LiveWallpapersPicker \
-    PhaseBeam
+    LiveWallpapersPicker
+
 
 # Include explicitly to work around GMS issues
 PRODUCT_PACKAGES += \
@@ -88,19 +169,25 @@ PRODUCT_PACKAGES += \
 
 # Extra Optional packages
 PRODUCT_PACKAGES += \
-    Calculator \
+    Gallery2 \
+    Camera2 \
+    Eleven \
+    Launcher3 \
     LatinIME \
-    BluetoothExt
-#    WolvesDen \
-#    ThemeInterfacer \
-#    Eleven \
-#    OmniSwitch \
-#    OmniJaws \
-#    OmniStyle \
-#    Turbo \
-#    GZRoms \
-#    Nova \
-#    NovaGoogleCompanion
+    BluetoothExt \
+    Eleven \
+    PrebuiltDeskClockGoogle \
+    WallpaperPickerGooglePrebuilt \
+    CalendarGooglePrebuilt \
+    Chrome \
+    Substratum \
+    OmniSwitch
+
+# Overlay Packages
+PRODUCT_PACKAGES += \
+    PixelOverlay \
+    NexusOverlay \
+    RedOverlay
 
 # Extra tools
 PRODUCT_PACKAGES += \
@@ -178,6 +265,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 PRODUCT_PACKAGE_OVERLAYS += vendor/gzosp/overlay/common
 
+$(call inherit-product-if-exists, vendor/gzosp/prebuilt/common/prebuilt.mk)
+
 # Boot animation include
 ifneq ($(TARGET_SCREEN_WIDTH) $(TARGET_SCREEN_HEIGHT),$(space))
 
@@ -218,11 +307,15 @@ endif
 # Versioning System
 # gzosp first version.
 PRODUCT_VERSION_MAJOR = 8.0
-PRODUCT_VERSION_MINOR = Beta
-PRODUCT_VERSION_MAINTENANCE = 1.0
-GZOSP_POSTFIX := -$(shell date +"%Y%m%d-%H%M")
+PRODUCT_VERSION_MINOR = OPR5
+PRODUCT_VERSION_MAINTENANCE = v2.0
+GZOSP_POSTFIX := -$(shell date +"%Y%m%d")
 ifdef GZOSP_BUILD_EXTRA
     GZOSP_POSTFIX := -$(GZOSP_BUILD_EXTRA)
+endif
+
+ifndef R3Ds_BUILD_TYPE
+    R3Ds_BUILD_TYPE := R3Ds
 endif
 
 ifndef GZOSP_BUILD_TYPE
@@ -230,15 +323,14 @@ ifndef GZOSP_BUILD_TYPE
 endif
 
 # Set all versions
-GZOSP_VERSION := Gzosp-$(GZOSP_BUILD)-$(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR).$(PRODUCT_VERSION_MAINTENANCE)-$(GZOSP_BUILD_TYPE)$(GZOSP_POSTFIX)
-GZOSP_MOD_VERSION := Gzosp-$(GZOSP_BUILD)-$(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR).$(PRODUCT_VERSION_MAINTENANCE)-$(GZOSP_BUILD_TYPE)$(GZOSP_POSTFIX)
+SIX_VERSION := sixrom_$(GZOSP_BUILD)-$(PRODUCT_VERSION_MAJOR)$(GZOSP_POSTFIX)-$(PRODUCT_VERSION_MINOR)-$(PRODUCT_VERSION_MAINTENANCE)-$(R3Ds_BUILD_TYPE)
+GZOSP_MOD_VERSION := sixrom_$(GZOSP_BUILD)-$(PRODUCT_VERSION_MAJOR)$(GZOSP_POSTFIX)-$(PRODUCT_VERSION_MINOR)-$(PRODUCT_VERSION_MAINTENANCE)-$(R3Ds_BUILD_TYPE)
 
 PRODUCT_PROPERTY_OVERRIDES += \
-    BUILD_DISPLAY_ID=$(BUILD_ID) \
-    gzosp.ota.version=$(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR).$(PRODUCT_VERSION_MAINTENANCE) \
-    ro.gzosp.version=$(GZOSP_VERSION) \
-    ro.modversion=$(GZOSP_MOD_VERSION) \
-    ro.gzosp.buildtype=$(GZOSP_BUILD_TYPE)
+    BUILD_DISPLAY_ID=$(R3Ds_BUILD_TYPE) \
+    six.ota.version=$(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR).$(PRODUCT_VERSION_MAINTENANCE) \
+    ro.six.version=$(SIX_VERSION) \
+    ro.modversion=$(SIX_VERSION)
 
 EXTENDED_POST_PROCESS_PROPS := vendor/gzosp/tools/gzosp_process_props.py
 

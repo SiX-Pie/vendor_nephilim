@@ -8,4 +8,4 @@ PRODUCT_PACKAGES += \
 
 # SMS
 PRODUCT_PACKAGES += \
-	messaging
+	Messaging

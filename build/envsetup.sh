@@ -1,6 +1,6 @@
 # gzosp functions that extend build/envsetup.sh
 
-function gzosp_device_combos()
+function six_device_combos()
 {
     local T list_file variant device
 
@@ -33,7 +33,7 @@ function gzosp_device_combos()
 
     while IFS= read -r device
     do
-        add_lunch_combo "gzosp_${device}-${variant}"
+        add_lunch_combo "six_${device}-${variant}"
     done < "${list_file}"
 }
 
