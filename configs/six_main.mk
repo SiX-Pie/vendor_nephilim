@@ -29,7 +29,8 @@ PRODUCT_PACKAGES += \
     Camera2 \
     Eleven \
     Launcher3 \
-    OmniSwitch
+    OmniSwitch \
+    OmniJaws
 
 # Include explicitly to work around GMS issues
 PRODUCT_PACKAGES += \
