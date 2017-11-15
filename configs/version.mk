@@ -14,7 +14,7 @@
 
 #SiX versioning
 ifndef SIX_BUILD_TYPE
-    SIX_BUILD_TYPE := OPP5-v2.5-R3Ds
+    SIX_BUILD_TYPE := OPR5-v2.5-R3Ds
 endif
 
 SIX_VERSION := $(PLATFORM_VERSION)-$(shell date +%Y%m%d)-$(SIX_BUILD_TYPE)
