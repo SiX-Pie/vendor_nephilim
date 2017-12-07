@@ -22,16 +22,9 @@ PRODUCT_PACKAGES += \
 
 # Custom Packages
 PRODUCT_PACKAGES += \
-    MonthCalendarWidget \
-    Busybox \
     Gallery2 \
-    Messaging \
     Camera2 \
-    Eleven \
-    Launcher3 \
-    OmniSwitch \
-    OmniJaws \
-    OmniStyle
+    Launcher3
 
 # Include explicitly to work around GMS issues
 PRODUCT_PACKAGES += \
