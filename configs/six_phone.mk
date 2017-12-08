@@ -71,13 +71,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.kernel.android.checkjni=0 \
     ro.kernel.checkjni=0 \
     ro.config.nocheckin=1 \
-    drm.service.enabled=true \
-    persist.volte_enabled_by_hw=1 \
-    persist.dbg.ims_volte_enable=1 \
-    persist.dbg.volte_avail_ovr=1 \
-    persist.dbg.vt_avail_ovr=1 \
-    persist.data.iwlan.enable=true \
-    persist.dbg.wfc_avail_ovr=1
+    drm.service.enabled=true
 
 # Thank you, please drive thru!
 PRODUCT_PROPERTY_OVERRIDES += \
