@@ -28,7 +28,8 @@ PRODUCT_PACKAGES += \
     Busybox \
     Messaging \
     Eleven \
-    OmniSwitch
+    OmniSwitch \
+    ExactCalculator
 
 # Include explicitly to work around GMS issues
 PRODUCT_PACKAGES += \
