@@ -24,7 +24,11 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     Gallery2 \
     Camera2 \
-    Launcher3
+    Launcher3 \
+    Busybox \
+    Messaging \
+    Eleven \
+    OmniSwitch
 
 # Include explicitly to work around GMS issues
 PRODUCT_PACKAGES += \
