@@ -40,3 +40,9 @@ PRODUCT_PACKAGES += \
     PixelOverlay \
     NexusOverlay \
     RedOverlay
+
+# System theme overlay
+PRODUCT_PACKAGES += \
+    AndroidDarkThemeOverlay \
+    SettingsDarkThemeOverlay
+
