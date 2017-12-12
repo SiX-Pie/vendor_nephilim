@@ -18,8 +18,9 @@ PRODUCT_PACKAGES += \
     PrebuiltDeskClockGoogle \
     Chrome \
     Substratum \
-    PixelOverlay \
-    NexusOverlay \
     EggGame \
-    CalendarGooglePrebuilt
+    CalendarGooglePrebuilt \
+    NexusOverlay \
+    PixelOverlay \
+    RedOverlay
 

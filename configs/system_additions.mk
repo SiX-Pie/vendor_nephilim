@@ -106,3 +106,6 @@ PRODUCT_COPY_FILES += \
     vendor/six/prebuilt/lib/soundfx/libvisualizer.so:system/lib/soundfx/libvisualizer.so
 
 $(call inherit-product-if-exists, vendor/six/prebuilt/prebuilt.mk)
+
+#$(call inherit-product, vendor/six/overlay/themes/themes.mk)
+
