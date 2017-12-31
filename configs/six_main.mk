@@ -42,7 +42,7 @@ PRODUCT_PACKAGES += \
     RedOverlay
 
 # System dark theme overlay
-PRODUCT_PACKAGES += \
-    AndroidDarkThemeOverlay \
-    SettingsDarkThemeOverlay
+#PRODUCT_PACKAGES += \
+#    AndroidDarkThemeOverlay \
+#    SettingsDarkThemeOverlay
 
