@@ -22,5 +22,6 @@ PRODUCT_PACKAGES += \
     CalendarGooglePrebuilt \
     NexusOverlay \
     PixelOverlay \
-    RedOverlay
+    RedOverlay \
+    Music
 
