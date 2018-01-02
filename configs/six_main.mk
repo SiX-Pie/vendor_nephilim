@@ -29,7 +29,8 @@ PRODUCT_PACKAGES += \
     Messaging \
     Eleven \
     OmniSwitch \
-    ExactCalculator
+    ExactCalculator \
+    OmniStyle
 
 # Include explicitly to work around GMS issues
 PRODUCT_PACKAGES += \
