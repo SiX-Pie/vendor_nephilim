@@ -30,7 +30,8 @@ PRODUCT_PACKAGES += \
     Eleven \
     OmniSwitch \
     ExactCalculator \
-    OmniStyle
+    OmniStyle \
+    OmniJaws
 
 # Include explicitly to work around GMS issues
 PRODUCT_PACKAGES += \
