@@ -27,7 +27,6 @@ PRODUCT_PACKAGES += \
     Launcher3 \
     Busybox \
     Messaging \
-    Eleven \
     OmniSwitch \
     ExactCalculator \
     OmniStyle \
