@@ -16,12 +16,7 @@
 PRODUCT_PACKAGES += \
     Turbo \
     PrebuiltDeskClockGoogle \
-    Chrome \
     Substratum \
     EggGame \
-    CalendarGooglePrebuilt \
-    NexusOverlay \
-    PixelOverlay \
-    RedOverlay \
-    Music
+    CalendarGooglePrebuilt
 

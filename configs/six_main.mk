@@ -30,17 +30,12 @@ PRODUCT_PACKAGES += \
     OmniSwitch \
     ExactCalculator \
     OmniStyle \
-    OmniJaws
+    OmniJaws \
+    Eleven
 
 # Include explicitly to work around GMS issues
 PRODUCT_PACKAGES += \
     librsjni
-
-# Overlay Packages
-PRODUCT_PACKAGES += \
-    PixelOverlay \
-    NexusOverlay \
-    RedOverlay
 
 # System dark theme overlay
 PRODUCT_PACKAGES += \
