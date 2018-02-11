@@ -1,8 +1,8 @@
 LOCAL_PATH:= $(call my-dir)
 include $(CLEAR_VARS)
 
-LOCAL_PACKAGE_NAME := PixelTheme
-LOCAL_RRO_THEME := PixelTheme
+LOCAL_PACKAGE_NAME := YellowTheme
+LOCAL_RRO_THEME := YellowTheme
 LOCAL_CERTIFICATE := platform
 LOCAL_MODULE_TAGS := optional
 LOCAL_SRC_FILES := $(call all-subdir-java-files)

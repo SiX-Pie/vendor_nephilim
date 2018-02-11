@@ -37,6 +37,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     librsjni
 
+# Overlay Packages
+$(call inherit-product-if-exists, vendor/six/overlay/themes.mk)
+
 # System dark theme overlay
 PRODUCT_PACKAGES += \
     AndroidDarkThemeOverlay \

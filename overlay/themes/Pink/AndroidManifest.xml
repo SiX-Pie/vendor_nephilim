@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.google.android.theme.green"
+    package="co.aoscp.theme.pink"
     platformBuildVersionCode="26"
     platformBuildVersionName="8.0.0">
 
-    <overlay android:priority="1" android:targetPackage="android"/>
+    <overlay android:priority="3" android:targetPackage="android" />
 
     <application android:hasCode="false"
-                 android:label="Green"/>
+                 android:label="Pink" />
 </manifest>
